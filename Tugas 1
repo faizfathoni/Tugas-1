@@ -1,0 +1,46 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+class Mahasiswa 
+{
+    public String NAMA, Inisial, NIM, Kelamin, Alamat;
+    public void isiData( String NAMA, String Inisial, String NIM, String Kelamin, String Alamat) 
+    {
+        this.NAMA = NAMA;
+        this.Inisial = Inisial;
+        this.NIM = NIM;
+        this.Kelamin = Kelamin;
+        this.Alamat = Alamat;
+    }
+    public void printData() 
+    {
+        System.out.println
+        ("Nama          : " + this.NAMA + "\n" +
+         "Inisial       : " + this.Inisial + "\n" +
+         "NIM           : " + this.NIM + "\n" +
+         "Jenis Kelamin : " + this.Kelamin + "\n" +
+         "Alamat        : " + this.Alamat + "\n");
+    }
+
+}
+class Driver 
+{
+    public static void main(String[] args) 
+    {
+        Mahasiswa mahasiswa = new Mahasiswa();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan Nama Lengkap : ");
+        String NAMA = input.nextLine();
+        System.out.print("Masukkan Nama Inisial : ");
+        String Inisial = input.nextLine();
+        System.out.print("Masukkan NIM : ");
+        String NIM = input.nextLine();
+        System.out.print("Masukkan Jenis Kelamin (L/P): ");
+        String Kelamin = input.nextLine();
+        System.out.print("Masukkan Alamat : ");
+        String Alamat = input.nextLine();
+        mahasiswa.isiData(NIM, NAMA, Inisial, Kelamin, Alamat);
+        mahasiswa.printData();
+    }
+}
